@@ -1,23 +1,64 @@
 {
-  "name": "my-tina-site-wongapl-rekrutacja-web-254455",
+  "name": "my-tina-app",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
+    "dev": "tinacms dev -c \"astro dev\"",
+    "build": "tinacms build && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prepare": "husky .husky",
+    "test:e2e": "npx playwright test",
+    "test:e2e:report": "npx playwright show-report",
+    "prettier:format": "prettier --write --html-whitespace-sensitivity ignore src/**/*{.astro, .tsx,.ts,.js,.jsx,.json,.css,.scss,.html,.md,.mdx}"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,yml,html,md,json}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
-    "@astrojs/rss": "^4.0.12",
-    "@astrojs/sitemap": "^3.4.1",
-    "astro": "^5.9.2",
-    "sharp": "^0.34.2",
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.4.0",
+    "@tanstack/react-virtual": "^3.13.9",
+    "astro": "^5.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.5.0",
     "tinacms": "^2.7.8"
   },
   "devDependencies": {
+    "@playwright/test": "^1.53.0",
     "@tinacms/cli": "^1.9.8",
-    "@types/node": "^24.0.0"
-  }
+    "@types/node": "^22.15.29",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.0",
+    "prettier": "^3.5.3"
+  },
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "yoavbls.pretty-ts-errors",
+    "astro-build.astro-vscode",
+    "unifiedjs.vscode-mdx",
+    "ms-playwright.playwright"
+  ],
+  "browserslist": [
+    "last 5 Chrome versions",
+    "last 15 Firefox versions",
+    "last 4 Edge major versions",
+    "last 4 Safari major versions",
+    "last 2 iOS major versions",
+    "Firefox ESR",
+    "not ios_saf 15.2-15.3",
+    "not safari 15.2-15.3"
+  ]
 }

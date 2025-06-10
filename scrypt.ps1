@@ -5,7 +5,6 @@ $excludedFolders = @(
     ".git",
 	".next",
     "public",
-	".husky",
 	".vscode",
 	"coverage",
   "__snapshots__"
@@ -25,8 +24,6 @@ $excludedFiles = @(
 	".nvmrc",
 	".prettierignore",
 	".stylelintrc",
-	".huskyrc",
-	".lintstagedrc",
 	".gitignore",
 	".editorconfig"
 )  # Pliki do wykluczenia
