@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import Pagination from '../../../components/Pagination.astro';
+import BlogCard from '../../../components/BlogCard.astro';
+import Layout from '../../../layouts/BlogPost.astro';
+
+export async function getStaticPaths() {
+  const PAGE_SIZE = 9;
+  const posts = await getCollection('blog');
+  const totalPages = Math.ceil(posts.length / PAGE_SIZE);
+
+  return Array.from({ length: totalPages }, (_, i) => ({
+    params: { page: `${i + 1}` },
+  }));
+}
+
+const PAGE_SIZE = 9;
+
+const posts = (await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const currentPage = parseInt(Astro.params.page ?? '1');
+const start = (currentPage - 1) * PAGE_SIZE;
+const paginatedPosts = posts.slice(start, start + PAGE_SIZE);
+const totalPages = Math.ceil(posts.length / PAGE_SIZE);
+---
+
+<Layout title="Blog">
+  <section>
+    <h1 class="text-4xl font-extrabold text-center text-purple-800 my-8">Blog</h1>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {paginatedPosts?.map((post) => <BlogCard post={post} />)}
+    </div>
+
+    <Pagination currentPage={currentPage} totalPages={totalPages} baseUrl="/blog/page" />
+  </section>
+</Layout>

@@ -1,0 +1,147 @@
+{
+  "editor.bracketPairColorization.enabled": true,
+  "editor.tabSize": 2,
+  "editor.guides.bracketPairs": "active",
+  "editor.detectIndentation": false,
+  "editor.wrappingIndent": "indent",
+  "editor.autoIndent": "brackets",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.glyphMargin": true,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 140,
+  "editor.suggestSelection": "first",
+  "editor.snippetSuggestions": "top",
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "workbench.startupEditor": "none",
+  "html.format.contentUnformatted": "pre,code,textarea",
+  "html.format.endWithNewline": true,
+  "html.format.extraLiners": "head, body, /html",
+  "html.format.indentHandlebars": false,
+  "html.format.indentInnerHtml": true,
+  "html.format.maxPreserveNewLines": 140,
+  "html.format.preserveNewLines": true,
+  "html.format.wrapLineLength": 0,
+  "html.format.wrapAttributes": "preserve",
+  "htmlhint.options": {
+    "tagname-lowercase": false,
+    "attr-value-double-quotes": true,
+    "attr-no-duplication": true,
+    "tag-pair": true,
+    "spec-char-escape": true,
+    "id-unique": true,
+    "src-not-empty": true,
+    "title-require": true
+  },
+  "importCost.largePackageColor": "#EC3A37F5",
+  "importCost.mediumPackageColor": "#B362FF",
+  "importCost.smallPackageColor": "#B362FF",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "editor.formatOnSave": false
+  },
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "html"
+  ],
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".ts",
+      ".html"
+    ]
+  },
+  "eslint.trace.server": "messages",
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always"
+  },
+  "prettier.singleQuote": true,
+  "prettier.useEditorConfig": false,
+  "prettier.useTabs": false,
+  "vsintellicode.modify.editor.suggestSelection": "enabled",
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "files.watcherExclude": {
+    ".idea/**": true,
+    ".vscode/**": true,
+    "**/var/cache/**": true,
+    "**/var/logs/**": true,
+    "**/var/sessions/**": true,
+    "node_modules": true,
+    "vendor": true
+  },
+  "search.exclude": {
+    ".idea/**": true,
+    ".vscode/**": true,
+    "**/var/cache/**": true,
+    "**/var/logs/**": true,
+    "**/var/sessions/**": true,
+    "node_modules": true,
+    "vendor": true
+  },
+  "files.exclude": {
+    "**/._*": true,
+    "node_modules": true,
+    "vendor": true,
+    "*/vendor/": true
+  },
+  "path-autocomplete.extensionOnImport": true,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always",
+      "source.fixAll": "always"
+    },
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.enable": true,
+  "stylelint.validate": [
+    "css",
+    "scss"
+  ],
+  "stylelint.configBasedir": ".stylelintrc",
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "editor.detectIndentation": true,
+    "editor.snippetSuggestions": "top",
+    "editor.wrappingIndent": "indent",
+    "editor.formatOnPaste": true,
+    "editor.glyphMargin": true
+  },
+  "[html][typescript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    }
+  },
+  "CodeGPT.apiKey": "CodeGPT Plus Beta",
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+}

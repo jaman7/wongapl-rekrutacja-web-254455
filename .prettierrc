@@ -19,15 +19,15 @@
   "importOrderSortSpecifiers": true,
   "overrides": [
     {
-      "files": "*.html",
-      "options": {
-        "parser": "html"
-      }
-    },
-    {
       "files": "*.scss",
       "options": {
         "singleQuote": false
+      }
+    },
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
       }
     }
   ]

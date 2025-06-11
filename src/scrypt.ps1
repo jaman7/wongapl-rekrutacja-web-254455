@@ -8,9 +8,7 @@ $excludedFolders = @(
     "public",
     ".vscode",
     "coverage",
-    "__snapshots__",
-	".husky",
-	"__generated__"
+    "__snapshots__"
 )
 
 $excludedSubfolders = @(
@@ -25,12 +23,10 @@ $excludedFiles = @(
     "snipsnap.code-snippets",
     ".npmrc",
     ".nvmrc",
-	 ".env",
     ".prettierignore",
     ".stylelintrc",
     ".gitignore",
-    ".editorconfig",
-	"tina-lock.json"
+    ".editorconfig"
 )
 
 $excludedExtensions = @(

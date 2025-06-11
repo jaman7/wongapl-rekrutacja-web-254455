@@ -1,68 +1,103 @@
 ---
-import HeaderLink from "./HeaderLink.astro";
-import config from "../content/config/config.json";
-import IconLink from "./react/IconLink";
+import HeaderLink from './HeaderLink.astro';
+import config from '../content/config/config.json';
+import IconLink from './react/IconLink';
 ---
 
-<header>
-	<nav>
-		<h2><a href="/">{config.seo.title}</a></h2>
-		<div class="internal-links">
-			{
-				config.nav.map((nav) => (
-					<HeaderLink href={nav.link}>{nav.title}</HeaderLink>
-				))
-			}
-		</div>
-		<div class="social-links">
-			{
-				config?.contactLinks?.map((link) => {
-					return (
-						<IconLink {...link} />
-					);
-				})
-			}
-		</div>
-	</nav>
-</header>
-<style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
+<header class="shadow-md z-50 relative">
+  <nav class="flex justify-between items-center p-4 w-full" role="navigation" aria-label="Main navigation">
+    <h2 class="text-xl font-bold text-sky-800 hover:text-indigo-500">
+      <a href="/">{config.seo.title}</a>
+    </h2>
 
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
-</style>
+    <ul class="hidden md:flex gap-4 items-center">
+      {
+        config.nav?.map((nav) => (
+          <li>
+            <HeaderLink href={nav.link}>{nav.title}</HeaderLink>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="hidden md:flex gap-4">
+      {config.contactLinks?.map((link) => <IconLink {...link} className="text-sky-800 hover:text-indigo-500" />)}
+    </div>
+
+    <button
+      id="burger-btn"
+      class="md:hidden z-50 w-10 h-10 flex items-center justify-center cursor-pointer"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <svg
+        id="icon-menu"
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-6 h-6 text-sky-800"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <svg
+        id="icon-close"
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-6 h-6 text-sky-800 hidden"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </nav>
+
+  <div
+    id="nav-menu"
+    class="fixed inset-0 z-40 flex flex-col items-center justify-center bg-white transition-all duration-300 ease-in-out scale-0 opacity-0 md:hidden"
+    role="dialog"
+    aria-modal="true"
+  >
+    <ul class="flex flex-col gap-6 text-lg font-semibold">
+      {
+        config.nav?.map((nav) => (
+          <li>
+            <a href={nav.link} class="text-sky-800 hover:text-indigo-500 nav-link">
+              {nav.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="flex gap-6 mt-8">
+      {config.contactLinks.map((link) => <IconLink {...link} className="text-sky-800 hover:text-indigo-500" />)}
+    </div>
+  </div>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burgerBtn = document.getElementById('burger-btn');
+      const navMenu = document.getElementById('nav-menu');
+
+      const toggleMenu = () => {
+        burgerBtn?.classList.toggle('open');
+        navMenu?.classList.toggle('scale-0');
+        navMenu?.classList.toggle('opacity-0');
+        navMenu?.classList.toggle('scale-100');
+        navMenu?.classList.toggle('opacity-100');
+
+        document.getElementById('icon-menu')?.classList.toggle('hidden');
+        document.getElementById('icon-close')?.classList.toggle('hidden');
+      };
+
+      burgerBtn?.addEventListener('click', toggleMenu);
+
+      document.addEventListener('click', (e) => {
+        if (e.target.matches('.nav-link')) {
+          toggleMenu();
+        }
+      });
+    });
+  </script>
+</header>

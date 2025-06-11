@@ -1,19 +1,19 @@
-import React from "react";
-import * as Icons from "react-icons/tb";
+import React from 'react';
+import * as Icons from 'react-icons/tb';
 
 type Props = {
-	iconName: string;
+  iconName: string;
+  size?: number;
 };
 
-const ReactIcon = ({ iconName }: Props) => {
-	const Icon = Icons[iconName as keyof typeof Icons];
+const ReactIcon = ({ iconName, size = 32 }: Props) => {
+  const Icon = Icons[iconName as keyof typeof Icons];
 
-	if (!Icon) {
-		return <div>Icon "{iconName}" not found</div>;
-	}
+  if (!Icon) {
+    return <div>Icon "{iconName}" not found</div>;
+  }
 
-	return <Icon size={32} />;
+  return <Icon size={size} />;
 };
 
 export default ReactIcon;
-

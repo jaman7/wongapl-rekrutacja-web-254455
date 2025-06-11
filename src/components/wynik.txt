@@ -1,0 +1,355 @@
+BaseHead.astro
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
+
+interface Props {
+	title: string;
+	description: string;
+	image?: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Font preloads -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.url)} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+
+<ClientRouter />
+
+Footer.astro
+---
+import config from "../content/config/config.json";
+import IconLink from "./react/IconLink";
+const today = new Date();
+---
+
+	<footer class="copyright-footer">
+		&copy; {today.getFullYear()}
+		{config.seo.siteOwner}. All rights reserved.
+		<div class="social-links">
+			{
+				config?.contactLinks?.map((link) => {
+					return (
+						<IconLink {...link} />
+					);
+				})
+			}
+		</div>
+	</footer>
+
+<style>
+
+	.copyright-footer {
+		padding: 2em 1em 2em 1em;
+		background: linear-gradient(var(--gray-gradient)) no-repeat;
+		color: rgb(var(--gray));
+		text-align: center;
+	}
+
+	.social-links {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		margin-top: 1em;
+	}
+
+	.social-links a {
+		text-decoration: none;
+		color: rgb(var(--gray));
+	}
+
+	.social-links a:hover {
+		color: rgb(var(--gray-dark));
+	}
+
+	.tina-footer {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		background-image: linear-gradient(60deg, #000000 0%,  #EC4815 50%, #000000 100%);
+		padding: 1.5em 0;
+	}
+
+	.tina-banner-content {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+		font-size: 1.2em;
+		position: relative;
+		z-index: 2;
+	}
+
+	.tina-footer::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -50%;
+		width: 200%;
+		height: 100%;
+		background-image: linear-gradient(60deg, #1F1E24 25%,   #EC4815 50%, #1F1E24 75%);
+		transition: transform 1s ease-in-out;
+		z-index: 1;
+	}
+
+	.tina-footer:has(.tina-banner-content a:hover)::before {
+		transform: scaleX(2);
+	}
+
+	.tina-banner-content img {
+		width: 30px;
+		height: auto;
+	}
+
+	.tina-banner-content a {
+		color: white;
+		text-decoration: none;
+		padding-top: 0.5em;
+		font-weight: bold;
+	}
+</style>
+
+FormattedDate.astro
+---
+interface Props {
+	date: Date;
+}
+
+const { date } = Astro.props;
+---
+
+<time datetime={date.toISOString()}>
+	{
+		date.toLocaleDateString('en-us', {
+			year: 'numeric',
+			month: 'short',
+			day: 'numeric',
+		})
+	}
+</time>
+
+Header.astro
+---
+import HeaderLink from './HeaderLink.astro';
+import config from '../content/config/config.json';
+import IconLink from './react/IconLink';
+---
+
+<header class="shadow-md z-50 relative">
+  <nav class="flex justify-between items-center p-4 max-w-7xl mx-auto">
+    <h2 class="text-xl font-bold text-sky-800 hover:text-indigo-500">
+      <a href="/">{config.seo.title}</a>
+    </h2>
+
+    <!-- Desktop menu -->
+    <ul class="hidden md:flex gap-4 items-center">
+      {
+        config.nav.map((nav) => (
+          <li>
+            <HeaderLink href={nav.link}>{nav.title}</HeaderLink>
+          </li>
+        ))
+      }
+    </ul>
+
+    <!-- Contact links (desktop) -->
+    <div class="hidden md:flex gap-4">
+      {config.contactLinks.map((link) => <IconLink {...link} className="text-sky-800 hover:text-indigo-500" />)}
+    </div>
+
+    <!-- Burger button (mobile) -->
+    <button id="burger-btn" class="md:hidden z-50 w-10 h-10 flex items-center justify-center cursor-pointer" aria-label="Toggle menu">
+      <svg
+        id="icon-menu"
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-6 h-6 text-sky-800"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <svg
+        id="icon-close"
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-6 h-6 text-sky-800 hidden"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div
+    id="nav-menu"
+    class="fixed inset-0 z-40 flex flex-col items-center justify-center bg-white transition-all duration-300 ease-in-out scale-0 opacity-0 md:hidden"
+  >
+    <ul class="flex flex-col gap-6 text-lg font-semibold">
+      {
+        config.nav.map((nav) => (
+          <li>
+            <a href={nav.link} class="text-sky-800 hover:text-indigo-500 nav-link">
+              {nav.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="flex gap-6 mt-8">
+      {config.contactLinks.map((link) => <IconLink {...link} className="text-sky-800 hover:text-indigo-500" />)}
+    </div>
+  </div>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burgerBtn = document.getElementById('burger-btn');
+      const navMenu = document.getElementById('nav-menu');
+
+      const toggleMenu = () => {
+        burgerBtn?.classList.toggle('open');
+        navMenu?.classList.toggle('scale-0');
+        navMenu?.classList.toggle('opacity-0');
+        navMenu?.classList.toggle('scale-100');
+        navMenu?.classList.toggle('opacity-100');
+
+        document.getElementById('icon-menu')?.classList.toggle('hidden');
+        document.getElementById('icon-close')?.classList.toggle('hidden');
+      };
+
+      burgerBtn?.addEventListener('click', toggleMenu);
+
+      document.addEventListener('click', (e) => {
+        if (e.target.matches('.nav-link')) {
+          toggleMenu();
+        }
+      });
+    });
+  </script>
+</header>
+
+HeaderLink.astro
+---
+import type { HTMLAttributes } from 'astro/types';
+import classNames from 'classnames';
+
+type Props = HTMLAttributes<'a'>;
+
+const { href, class: className, ...props } = Astro.props;
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
+const subpath = pathname.match(/[^\/]+/g);
+const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
+---
+
+<a href={href} class={classNames('flex p-2 font-bold hover:text-indigo-500', {'text-orange-500': isActive, 'text-sky-800': !isActive})} {...props}>
+	<slot />
+</a>
+
+react\FormattedDate.tsx
+
+import React from 'react'
+
+function FormattedDate({ date }: { date: string }) {
+	const _date = new Date(date)
+	return (
+		<time dateTime={_date.toISOString()}>
+			{
+				_date.toLocaleDateString('en-us', {
+					year: 'numeric',
+					month: 'short',
+					day: 'numeric',
+				})
+			}
+		</time>
+	)
+}
+
+export default FormattedDate
+
+
+
+
+react\icon.tsx
+import React from "react";
+import * as Icons from "react-icons/tb";
+
+type Props = {
+	iconName: string;
+};
+
+const ReactIcon = ({ iconName }: Props) => {
+	const Icon = Icons[iconName as keyof typeof Icons];
+
+	if (!Icon) {
+		return <div>Icon "{iconName}" not found</div>;
+	}
+
+	return <Icon size={32} />;
+};
+
+export default ReactIcon;
+
+
+react\IconLink.tsx
+import React from 'react';
+import ReactIcon from './icon';
+
+type LinkProps = {
+  title: string;
+  link: string;
+  icon: string;
+  className: string;
+};
+function IconLink({ title, link, icon, className = '' }: LinkProps) {
+  return (
+    <a className={className} href={link} target="_blank" aria-label={`Go to ${title}`}>
+      <span className="sr-only">{title}</span>
+      <ReactIcon iconName={icon} />
+    </a>
+  );
+}
+
+export default IconLink;
+

@@ -1,5 +1,5 @@
-import { defineCollection, z } from "astro:content";
-import client from "../tina/__generated__/client";
+import { defineCollection, z } from 'astro:content';
+import client from '../tina/__generated__/client';
 
 const blog = defineCollection({
   loader: async () => {
@@ -13,7 +13,7 @@ const blog = defineCollection({
 
         return {
           ...node,
-          id: node?._sys.relativePath.replace(/\.mdx?$/, ""), // Generate clean URLs
+          id: node?._sys.relativePath.replace(/\.mdx?$/, ''), // Generate clean URLs
           tinaInfo: node?._sys, // Include Tina system info if needed
         };
       });
@@ -30,6 +30,8 @@ const blog = defineCollection({
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     heroImage: z.string().nullish(),
+    author: z.string(),
+    category: z.string(),
   }),
 });
 
@@ -45,7 +47,7 @@ const page = defineCollection({
 
         return {
           ...node,
-          id: node?._sys.relativePath.replace(/\.mdx?$/, ""), // Generate clean URLs
+          id: node?._sys.relativePath.replace(/\.mdx?$/, ''), // Generate clean URLs
           tinaInfo: node?._sys, // Include Tina system info if needed
         };
       });
@@ -60,5 +62,5 @@ const page = defineCollection({
     seoTitle: z.string(),
     body: z.any(),
   }),
-})
+});
 export const collections = { blog, page };

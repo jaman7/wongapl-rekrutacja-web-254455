@@ -1,0 +1,23 @@
+---
+const { currentPage, totalPages, baseUrl } = Astro.props;
+---
+
+<nav class="mt-12 flex justify-center space-x-2 text-sm">
+  {
+    Array.from({ length: totalPages }, (_, i) => {
+      const page = i + 1;
+      const isActive = page === currentPage;
+
+      return (
+        <a
+          href={`${baseUrl}/${page}`}
+          class={`w-9 h-9 flex items-center justify-center rounded-full border font-medium transition ${
+            isActive ? 'bg-purple-700 text-white border-purple-700' : 'bg-white text-purple-700 border-gray-300 hover:bg-purple-100'
+          }`}
+        >
+          {page}
+        </a>
+      );
+    })
+  }
+</nav>
