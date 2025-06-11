@@ -24,5 +24,26 @@
       "link": "https://github.com/jaman7?tab=repositories",
       "icon": "TbBrandGithub"
     }
-  ]
+  ],
+  "footer": {
+    "columns": [
+      {
+        "title": "Page Links",
+        "links": [
+          {
+            "title": "Home",
+            "link": "/"
+          },
+          {
+            "title": "Blog",
+            "link": "/blog"
+          },
+          {
+            "title": "About",
+            "link": "/about"
+          }
+        ]
+      }
+    ]
+  }
 }
