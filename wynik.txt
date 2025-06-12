@@ -1866,6 +1866,10 @@ const FooterText = (props: Props) => {
 
   const footer = data.footer;
 
+  if (!footer?.body?.children?.length) {
+    return <p className="text-sm text-gray-400">Brak treœci stopki</p>;
+  }
+
   return <TinaMarkdown content={footer?.body} />;
 };
 
@@ -1873,34 +1877,89 @@ export default FooterText;
 
 
 tina\pages\HomePage.tsx
-import { tinaField, useTina } from "tinacms/dist/react";
-import type { PageQuery, PageQueryVariables } from "../__generated__/types";
-import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { tinaField, useTina } from 'tinacms/dist/react';
+import type { PageQuery, PageQueryVariables } from '../__generated__/types';
+import { TinaMarkdown } from 'tinacms/dist/rich-text';
 
 type Props = {
-	variables: PageQueryVariables;
-	data: PageQuery;
-	query: string;
-}
+  variables: PageQueryVariables;
+  data: PageQuery;
+  query: string;
+};
 
 const HomePage = (props: Props) => {
-	const { data } = useTina({
-		query: props.query,
-		variables: props.variables,
-		data: props.data,
-	})
+  const { data } = useTina({
+    query: props.query,
+    variables: props.variables,
+    data: props.data,
+  });
 
-	const page = data.page;
+  const page = data.page;
 
+  console.log(page);
 
-	return (
-		<main>
-			<div data-tina-field={tinaField(page, "body")}>
-				<TinaMarkdown content={page.body} />
-			</div>
-		</main>
-	)
-}
+  return (
+    <main className="block" data-tina-field={tinaField(page, 'body')}>
+      {/* <TinaMarkdown content={page.body} /> */}
+
+      <section className="bg-gradient-to-r from-purple-700 via-indigo-600 to-blue-500 text-white py-28 relative overflow-hidden">
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg">Build faster with Astro + TinaCMS</h1>
+          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
+            Deliver content-driven websites with lightning speed and in-line editing that feels magical.
+          </p>
+          <div className="flex justify-center gap-4">
+            <a href="/blog" className="px-6 py-3 bg-white text-purple-700 font-semibold rounded-lg shadow hover:bg-gray-100 transition">
+              Explore Blog
+            </a>
+            <a
+              href="/admin"
+              className="px-6 py-3 bg-transparent border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-700 transition"
+            >
+              Edit Content
+            </a>
+          </div>
+        </div>
+
+        <svg
+          className="absolute -top-16 -right-20 opacity-30 w-[400px] h-[400px] rotate-12"
+          viewBox="0 0 200 200"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="#ffffff"
+            d="M41.6,-55.3C54.8,-50.3,67.7,-39.8,73.2,-26.4C78.6,-13,76.7,3.2,70.2,17.9C63.6,32.7,52.5,46.1,38.4,52.7C24.3,59.2,7.2,58.9,-8.4,60.3C-24,61.7,-38,64.9,-49.8,59.4C-61.6,53.9,-71.1,39.7,-73.6,24.7C-76.1,9.7,-71.5,-6,-66.4,-21.6C-61.4,-37.2,-56,-52.8,-44.8,-58.6C-33.5,-64.4,-16.8,-60.4,-1.2,-58.5C14.4,-56.5,28.8,-56.3,41.6,-55.3Z"
+            transform="translate(100 100)"
+          />
+        </svg>
+      </section>
+
+      <section className="max-w-10xl mx-auto p-10 grid md:grid-cols-2 gap-10 items-center">
+        <img src="/illustration1.svg" alt="Illustration 1" className="w-full" />
+        <div>
+          <h2 className="text-2xl font-bold text-purple-700 mb-4">Build with speed</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.</p>
+        </div>
+      </section>
+
+      <section className="bg-gray-100 p-10">
+        <div className="max-w-10xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-2xl font-bold text-sky-800 mb-4">CMS made easy</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl.</p>
+          </div>
+          <img src="/illustration2.svg" alt="Illustration 2" className="w-full" />
+        </div>
+      </section>
+
+      <section className="max-w-10xl mx-auto p-10 text-center">
+        <h2 className="text-2xl font-bold text-orange-600 mb-4">Powered by Astro</h2>
+        <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <img src="/illustration3.svg" alt="Illustration 3" className="mx-auto w-64" />
+      </section>
+    </main>
+  );
+};
 
 export default HomePage;
 
