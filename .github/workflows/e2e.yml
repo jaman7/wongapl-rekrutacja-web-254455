@@ -33,29 +33,9 @@ jobs:
           name: playwright-report
           path: playwright-report
 
-  deploy-report:
-    name: Deploy Test Report to Cloudflare Pages
-    needs: e2e-tests
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Download report artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: playwright-report
-
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/pages-action@1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ${{ secrets.CLOUDFLARE_E2E_PROJECT }}
-          directory: playwright-report
-          branch: main
-
   lighthouse:
-    name: Lighthouse Audit
-    needs: deploy-report
+    name: Lighthouse Audit + Viewer
+    needs: e2e-tests
     runs-on: ubuntu-latest
 
     steps:
@@ -70,17 +50,47 @@ jobs:
       - name: Install Lighthouse CI
         run: npm install -g @lhci/cli
 
-      - name: Run Lighthouse CI
-        run: |
-          mkdir -p .lighthouseci
-          lhci collect --url=https://jaman7-wongapl-rekrutacja-web-254455.pages.dev \
-                       --url=https://jaman7-wongapl-rekrutacja-web-254455.pages.dev/blog \
-                       --url=https://jaman7-wongapl-rekrutacja-web-254455.pages.dev/blog/page/1 \
-                       --numberOfRuns=3 \
-                       --config=./.lighthouserc.js || echo "Lighthouse failed, continuing..."
+      - name: Download Playwright Report
+        uses: actions/download-artifact@v3
+        with:
+          name: playwright-report
+          path: playwright-report
 
-      - name: Upload Lighthouse Report
+      - name: Run Lighthouse CI and Export HTML Reports
+        run: |
+          mkdir -p playwright-report/lighthouse
+          lhci collect \
+            --url=https://jaman7-wongapl-rekrutacja-web-254455.pages.dev \
+            --url=https://jaman7-wongapl-rekrutacja-web-254455.pages.dev/blog \
+            --url=https://jaman7-wongapl-rekrutacja-web-254455.pages.dev/blog/page/1 \
+            --numberOfRuns=3 \
+            --config=./.lighthouserc.js || echo "Lighthouse failed, continuing..."
+          cp .lighthouseci/*.html playwright-report/lighthouse/
+          echo "<meta http-equiv='refresh' content='./lighthouse/index.html'>" > playwright-report/index.html
+
+      - name: Upload Combined Report
         uses: actions/upload-artifact@v3
         with:
-          name: lighthouse-report
-          path: .lighthouseci
+          name: full-report
+          path: playwright-report
+
+  deploy-report:
+    name: Deploy Reports to Cloudflare Pages
+    needs: lighthouse
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download final report artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: full-report
+          path: playwright-report
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ${{ secrets.CLOUDFLARE_E2E_PROJECT }}
+          directory: playwright-report
+          branch: main

@@ -1,6 +1,5 @@
 {
   "name": "my-tina-app",
-  "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "tinacms dev -c \"astro dev\"",
@@ -10,7 +9,8 @@
     "prepare": "husky .husky",
     "test:e2e": "npx playwright test",
     "test:e2e:report": "npx playwright show-report",
-    "prettier:format": "prettier --write --html-whitespace-sensitivity ignore src/**/*{.astro, .tsx,.ts,.js,.jsx,.json,.css,.scss,.html,.md,.mdx}"
+    "prettier:format": "prettier --write --html-whitespace-sensitivity ignore src/**/*{.astro, .tsx,.ts,.js,.jsx,.json,.css,.scss,.html,.md,.mdx}",
+    "lighthouse:local": "sh ./e2e-lighthouse-local.sh"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,yml,html,md,json}": [
