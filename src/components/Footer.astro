@@ -21,15 +21,19 @@ const footerData = await client.queries.footer({ relativePath: 'footer.mdx' });
       {config.contactLinks?.map((link) => <IconLink {...link} className="text-white hover:text-orange-500" />)}
     </div>
 
-    <ul class="flex gap-3 justify-end">
-      {
-        footerNav.map((item) => (
-          <HeaderLink href={item.link} isFooter>
-            {item.title}
-          </HeaderLink>
-        ))
-      }
-    </ul>
+    <div class="flex justify-end">
+      <ul class="flex gap-3">
+        {
+          footerNav.map((item) => (
+            <li>
+              <HeaderLink href={item.link} isFooter>
+                {item.title}
+              </HeaderLink>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </div>
 
   <div class="mt-10 flex justify-center gap-4">
