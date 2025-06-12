@@ -1,4 +1,4 @@
-name: E2E Tests and Report Deployment
+name: E2E Tests and Lighthouse Audit
 
 on:
   pull_request:
@@ -25,7 +25,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright Tests
-        run: npx playwright test --project=chromium --reporter html
+        run: npx playwright test --project=chromium --reporter=html
 
       - name: Upload HTML report artifact
         uses: actions/upload-artifact@v3
@@ -52,3 +52,35 @@ jobs:
           projectName: ${{ secrets.CLOUDFLARE_E2E_PROJECT }}
           directory: playwright-report
           branch: main
+
+  lighthouse:
+    name: Lighthouse Audit
+    needs: deploy-report
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli
+
+      - name: Run Lighthouse CI
+        run: |
+          mkdir -p .lighthouseci
+          lhci collect --url=https://jaman7-wongapl-rekrutacja-web-254455.pages.dev \
+                       --url=https://jaman7-wongapl-rekrutacja-web-254455.pages.dev/blog \
+                       --url=https://jaman7-wongapl-rekrutacja-web-254455.pages.dev/blog/page/1 \
+                       --numberOfRuns=3 \
+                       --config=./.lighthouserc.js || echo "Lighthouse failed, continuing..."
+
+      - name: Upload Lighthouse Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: lighthouse-report
+          path: .lighthouseci
