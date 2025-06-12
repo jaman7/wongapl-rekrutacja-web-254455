@@ -45,9 +45,17 @@ export const PageCollection: Collection = {
             },
           ],
         },
-        { type: 'string', name: 'gradientFrom', label: 'Gradient From', ui: { component: 'color' } },
-        { type: 'string', name: 'gradientTo', label: 'Gradient To', ui: { component: 'color' } },
-        { type: 'boolean', name: 'showBlob', label: 'Show Decorative Blob?' },
+        {
+          type: 'image',
+          name: 'backgroundImage',
+          label: 'Background Image (PNG)',
+        },
+        {
+          type: 'string',
+          name: 'textColor',
+          label: 'Text Color',
+          ui: { component: 'color' },
+        },
       ],
     },
     {
@@ -100,6 +108,24 @@ export const PageCollection: Collection = {
         { type: 'string', name: 'title', label: 'Title' },
         { type: 'string', name: 'subtitle', label: 'Subtitle' },
         { type: 'image', name: 'image', label: 'Photo' },
+      ],
+    },
+    {
+      type: 'object',
+      name: 'aboutSections',
+      label: 'About Content Sections',
+      list: true,
+      fields: [
+        { type: 'string', name: 'title', label: 'Title' },
+        { type: 'image', name: 'image', label: 'Image' },
+        {
+          type: 'string',
+          name: 'content',
+          label: 'Text',
+          ui: {
+            component: 'textarea',
+          },
+        },
       ],
     },
   ],

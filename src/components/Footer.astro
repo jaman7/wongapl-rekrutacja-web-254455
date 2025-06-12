@@ -1,21 +1,20 @@
 ---
-import { getEntry } from 'astro:content';
 import client from '../../tina/__generated__/client';
-import FooterText from '../../tina/pages/FooterText';
+import SanitizedFooterText from '../../tina/pages/SanitizedFooterText.';
 import config from '../content/config/config.json';
 import HeaderLink from './HeaderLink.astro';
 import IconLink from './react/IconLink';
+import ScrollToTop from './react/ScrollToTop';
+
 const today = new Date();
-
 const footerNav = config['footerNav'];
-
 const footerData = await client.queries.footer({ relativePath: 'footer.mdx' });
 ---
 
 <footer class="bg-[#1f1e24] text-white px-4 py-10 text-sm">
   <div class="grid gap-8 md:grid-cols-3">
     <div class="flex">
-      <FooterText {...footerData} client:load />
+      <SanitizedFooterText {...footerData} client:load />
     </div>
 
     <div class="flex justify-center">
@@ -37,3 +36,4 @@ const footerData = await client.queries.footer({ relativePath: 'footer.mdx' });
     <p class="text-slate-50 text-xs">&copy; {today.getFullYear()} {config.seo.siteOwner}. All rights reserved.</p>
   </div>
 </footer>
+<ScrollToTop client:load />

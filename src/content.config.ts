@@ -5,7 +5,6 @@ const blog = defineCollection({
   loader: async () => {
     const postsResponse = await client.queries.blogConnection();
 
-    // Map Tina posts to the correct format for Astro
     return postsResponse.data.blogConnection.edges
       ?.filter((post) => !!post)
       .map((post) => {
@@ -13,8 +12,8 @@ const blog = defineCollection({
 
         return {
           ...node,
-          id: node?._sys.relativePath.replace(/\.mdx?$/, ''), // Generate clean URLs
-          tinaInfo: node?._sys, // Include Tina system info if needed
+          id: node?._sys.relativePath.replace(/\.mdx?$/, ''),
+          tinaInfo: node?._sys,
         };
       });
   },
@@ -39,7 +38,6 @@ const page = defineCollection({
   loader: async () => {
     const postsResponse = await client.queries.pageConnection();
 
-    // Map Tina posts to the correct format for Astro
     return postsResponse.data.pageConnection.edges
       ?.filter((p) => !!p)
       .map((p) => {
@@ -47,8 +45,8 @@ const page = defineCollection({
 
         return {
           ...node,
-          id: node?._sys.relativePath.replace(/\.mdx?$/, ''), // Generate clean URLs
-          tinaInfo: node?._sys, // Include Tina system info if needed
+          id: node?._sys.relativePath.replace(/\.mdx?$/, ''),
+          tinaInfo: node?._sys,
         };
       });
   },

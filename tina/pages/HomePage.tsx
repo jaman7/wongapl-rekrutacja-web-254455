@@ -19,10 +19,16 @@ const HomePage = (props: Props) => {
 
   return (
     <main className="block">
-      <section className={`bg-gradient-to-r from-${hero?.gradientFrom} to-${hero?.gradientTo} text-white py-28 relative overflow-hidden`}>
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg">{hero?.title}</h1>
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">{hero?.subtitle}</p>
+      <section
+        className="relative py-24 bg-center bg-cover"
+        style={{
+          backgroundImage: `url(${hero?.backgroundImage})`,
+          color: hero?.textColor || 'white',
+        }}
+      >
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white/90 mb-6 drop-shadow-lg">{hero?.title}</h1>
+          <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8 drop-shadow-lg">{hero?.subtitle}</p>
           <div className="flex justify-center gap-4">
             {hero?.buttons?.map((btn, i) => (
               <a
@@ -39,23 +45,13 @@ const HomePage = (props: Props) => {
             ))}
           </div>
         </div>
-
-        {hero?.showBlob && (
-          <svg
-            className="absolute -top-16 -right-20 opacity-30 w-[400px] h-[400px] rotate-12"
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path fill="#ffffff" d="M41.6,-55.3C54.8,-50.3,67.7,-39.8..." transform="translate(100 100)" />
-          </svg>
-        )}
       </section>
 
       <section className="max-w-7xl mx-auto p-10">
         <TinaMarkdown content={body} />
       </section>
 
-      <section className="py-20 bg-gray-50 text-center">
+      <section className="px-4 py-10 bg-gray-50 text-center">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12">Features</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -69,7 +65,7 @@ const HomePage = (props: Props) => {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="px-4 py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-12">What People Say</h2>
           <div className="grid sm:grid-cols-2 gap-10">
@@ -85,8 +81,8 @@ const HomePage = (props: Props) => {
         </div>
       </section>
 
-      <section className="bg-gray-100 p-10">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <section className="bg-gray-100 px-4 py-10">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <img src={section1?.image ?? ''} alt="Illustration 1" className="w-full" />
           <div>
             <h2 className="text-2xl font-bold text-purple-700 mb-4">{section1?.title}</h2>
@@ -103,8 +99,8 @@ const HomePage = (props: Props) => {
         <img src={section2?.image ?? ''} alt="Illustration 2" className="w-full" />
       </section>
 
-      <section className="bg-gray-100 p-10">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <section className="bg-gray-100 px-4 py-10">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <img src={section3?.image ?? ''} alt="Illustration 1" className="w-full" />
           <div>
             <h2 className="text-2xl font-bold text-purple-700 mb-4">{section3?.title}</h2>

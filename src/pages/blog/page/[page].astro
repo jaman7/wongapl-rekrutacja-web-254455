@@ -27,7 +27,7 @@ const totalPages = Math.ceil(posts.length / PAGE_SIZE);
   <section>
     <h1 class="text-4xl font-extrabold text-center text-purple-800 my-8">Blog</h1>
 
-    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-testid="blog-card">
       {paginatedPosts?.map((post) => <BlogCard post={post} />)}
     </div>
 

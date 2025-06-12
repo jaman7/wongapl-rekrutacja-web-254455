@@ -14,6 +14,7 @@ export const footerCollection: Collection = {
       label: 'Footer Text',
       type: 'rich-text',
       isBody: true,
+      templates: [],
     },
   ],
 };
