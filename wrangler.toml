@@ -1,0 +1,11 @@
+name = "jaman7-wongapl-rekrutacja-web-254455"
+type = "javascript"
+compatibility_date = "2024-06-01"
+workers_dev = true
+
+# Pobierany z GitHub Secrets w Actions – lokalnie nadpisz ręcznie lub zostaw pusty
+account_id = "${{ secrets.CLOUDFLARE_ACCOUNT_ID }}"
+
+[site]
+bucket = "./dist"
+entry-point = "."

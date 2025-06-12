@@ -10,7 +10,8 @@
     "test:e2e": "npx playwright test",
     "test:e2e:report": "npx playwright show-report",
     "prettier:format": "prettier --write --html-whitespace-sensitivity ignore src/**/*{.astro, .tsx,.ts,.js,.jsx,.json,.css,.scss,.html,.md,.mdx}",
-    "lighthouse:local": "sh ./e2e-lighthouse-local.sh"
+    "lighthouse:local": "sh ./e2e-lighthouse-local.sh",
+    "deploy:wrangler": "wrangler publish"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,yml,html,md,json}": [
@@ -47,7 +48,8 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.0",
     "prettier": "^3.5.3",
-    "prettier-plugin-astro": "^0.14.1"
+    "prettier-plugin-astro": "^0.14.1",
+    "wrangler": "^4.20.0"
   },
   "recommendations": [
     "esbenp.prettier-vscode",
