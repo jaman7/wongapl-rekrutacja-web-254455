@@ -63,4 +63,5 @@ const page = defineCollection({
     body: z.any(),
   }),
 });
+
 export const collections = { blog, page };

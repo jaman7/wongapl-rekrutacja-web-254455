@@ -1,18 +1,14 @@
 import { defineConfig } from 'tinacms';
 import { BlogCollection } from './collections/blog';
-import { FooterLinksCollection } from './collections/footer-links';
+import { footerCollection } from './collections/footer';
 import { GlobalConfigCollection } from './collections/global-config';
 import { PageCollection } from './collections/page';
 
-// Your hosting provider likely exposes this as an environment variable
 const branch = process.env.GITHUB_BRANCH || 'main';
 
 export default defineConfig({
   branch,
-
-  // Get this from tina.io
   clientId: process.env.TINA_PUBLIC_CLIENT_ID,
-  // Get this from tina.io
   token: process.env.TINA_TOKEN,
 
   build: {
@@ -25,8 +21,7 @@ export default defineConfig({
       publicFolder: 'public',
     },
   },
-  // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
-    collections: [BlogCollection, PageCollection, GlobalConfigCollection, FooterLinksCollection],
+    collections: [BlogCollection, PageCollection, GlobalConfigCollection, footerCollection],
   },
 });

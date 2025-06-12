@@ -101,40 +101,29 @@ export const GlobalConfigCollection: Collection = {
       ],
     },
     {
-      name: 'footerText',
-      label: 'Footer Text',
-      type: 'rich-text',
-      isBody: true,
-      parser: { type: 'mdx' },
-    },
-    {
-      name: 'footer',
-      label: 'Footer Columns',
+      name: 'footerNav',
+      label: 'Footer Site Navigation Menu (Reorder, Add, Remove)',
       type: 'object',
+      list: true,
+      ui: {
+        itemProps: (item) => {
+          return {
+            label: item.title,
+          };
+        },
+      },
       fields: [
         {
-          name: 'columns',
-          label: 'Columns',
-          type: 'object',
-          list: true,
-          fields: [
-            {
-              name: 'title',
-              type: 'string',
-              label: 'Column Title',
-              required: true,
-            },
-            {
-              name: 'links',
-              label: 'Links',
-              type: 'object',
-              list: true,
-              fields: [
-                { name: 'title', type: 'string', label: 'Link Title', required: true },
-                { name: 'link', type: 'string', label: 'Link URL or Text', required: true },
-              ],
-            },
-          ],
+          name: 'title',
+          label: 'Title of Nav Item',
+          type: 'string',
+          required: true,
+        },
+        {
+          name: 'link',
+          label: 'Path of the Nav Item',
+          type: 'string',
+          required: true,
         },
       ],
     },

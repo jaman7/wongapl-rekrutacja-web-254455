@@ -25,25 +25,18 @@
       "icon": "TbBrandGithub"
     }
   ],
-  "footer": {
-    "columns": [
-      {
-        "title": "Page Links",
-        "links": [
-          {
-            "title": "Home",
-            "link": "/"
-          },
-          {
-            "title": "Blog",
-            "link": "/blog"
-          },
-          {
-            "title": "About",
-            "link": "/about"
-          }
-        ]
-      }
-    ]
-  }
+  "footerNav": [
+    {
+      "title": "Home",
+      "link": "/"
+    },
+    {
+      "title": "Blog",
+      "link": "/blog"
+    },
+    {
+      "title": "About",
+      "link": "/about"
+    }
+  ]
 }

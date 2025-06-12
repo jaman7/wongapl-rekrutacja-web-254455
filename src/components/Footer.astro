@@ -1,33 +1,36 @@
 ---
+import { getEntry } from 'astro:content';
+import client from '../../tina/__generated__/client';
+import FooterText from '../../tina/pages/FooterText';
 import config from '../content/config/config.json';
 import HeaderLink from './HeaderLink.astro';
 import IconLink from './react/IconLink';
 const today = new Date();
+
+const footerNav = config['footerNav'];
+
+const footerData = await client.queries.footer({ relativePath: 'footer.mdx' });
 ---
 
 <footer class="bg-[#1f1e24] text-white px-4 py-10 text-sm">
   <div class="grid gap-8 md:grid-cols-3">
-    <div class="flex justify-center">
-      <h2 class="text-xl font-bold text-slate-50 mb-4">{config.seo.title}</h2>
+    <div class="flex">
+      <FooterText {...footerData} client:load />
     </div>
 
     <div class="flex justify-center">
       {config.contactLinks?.map((link) => <IconLink {...link} className="text-white hover:text-orange-500" />)}
     </div>
 
-    {
-      config.footer?.columns?.map((col) => (
-        <ul class="flex gap-3 justify-end">
-          {col.links.map((link) => (
-            <li>
-              <HeaderLink href={link.link} isFooter={true}>
-                {link.title}
-              </HeaderLink>
-            </li>
-          ))}
-        </ul>
-      ))
-    }
+    <ul class="flex gap-3 justify-end">
+      {
+        footerNav.map((item) => (
+          <HeaderLink href={item.link} isFooter>
+            {item.title}
+          </HeaderLink>
+        ))
+      }
+    </ul>
   </div>
 
   <div class="mt-10 flex justify-center gap-4">

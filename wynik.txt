@@ -346,7 +346,7 @@ declare module 'astro:content' {
 
 
 .astro\data-store.json
-[["Map",1,2,9,10,216,217],"meta::meta",["Map",3,4,5,6,7,8],"astro-version","5.9.2","content-config-digest","424aa61ccf2e9822","astro-config-digest","{\"root\":{},\"srcDir\":{},\"publicDir\":{},\"outDir\":{},\"cacheDir\":{},\"site\":\"http://localhost:4321\",\"compressHTML\":true,\"base\":\"/\",\"trailingSlash\":\"ignore\",\"output\":\"static\",\"scopedStyleStrategy\":\"attribute\",\"build\":{\"format\":\"directory\",\"client\":{},\"server\":{},\"assets\":\"_astro\",\"serverEntry\":\"entry.mjs\",\"redirects\":true,\"inlineStylesheets\":\"auto\",\"concurrency\":1},\"server\":{\"open\":false,\"host\":false,\"port\":4321,\"streaming\":true,\"allowedHosts\":[]},\"redirects\":{},\"image\":{\"endpoint\":{\"route\":\"/_image\"},\"service\":{\"entrypoint\":\"astro/assets/services/sharp\",\"config\":{}},\"domains\":[],\"remotePatterns\":[],\"experimentalDefaultStyles\":true},\"devToolbar\":{\"enabled\":true},\"markdown\":{\"syntaxHighlight\":{\"type\":\"shiki\",\"excludeLangs\":[\"math\"]},\"shikiConfig\":{\"langs\":[],\"langAlias\":{},\"theme\":\"github-dark\",\"themes\":{},\"wrap\":false,\"transformers\":[]},\"remarkPlugins\":[],\"rehypePlugins\":[],\"remarkRehype\":{},\"gfm\":true,\"smartypants\":true},\"security\":{\"checkOrigin\":true},\"env\":{\"schema\":{},\"validateSecrets\":false},\"experimental\":{\"clientPrerender\":false,\"contentIntellisense\":false,\"responsiveImages\":false,\"headingIdCompat\":false,\"preserveScriptOrder\":false,\"csp\":false},\"legacy\":{\"collections\":false}}","blog",["Map",11,12,24,25,34,35,44,45,54,55,63,64,72,73,81,82,90,91,99,100,108,109,117,118,126,127,135,136,144,145,153,154,162,163,171,172,180,181,189,190,198,199,207,208],"cms-integration",{"id":11,"data":13},{"tinaInfo":14,"title":17,"description":18,"pubDate":19,"updatedDate":20,"heroImage":21,"author":22,"category":23},{"filename":11,"basename":15,"path":16,"relativePath":15},"cms-integration.mdx","src/content/blog/cms-integration.mdx","Integracja z TinaCMS","Jak po³¹czyæ Astro z TinaCMS i tworzyæ dynamiczne strony.",["Date","2024-06-10T00:00:00.000Z"],["Date","1970-01-01T00:00:00.000Z"],"/blog-placeholder.jpg","xyx","abc","hello-world",{"id":24,"data":26},{"tinaInfo":27,"title":30,"description":31,"pubDate":32,"updatedDate":33,"heroImage":21,"author":22,"category":23},{"filename":24,"basename":28,"path":29,"relativePath":28},"hello-world.mdx","src/content/blog/hello-world.mdx","Witaj, œwiecie!","Pierwszy wpis na blogu. Krótkie powitanie i cel istnienia tej strony.",["Date","2024-06-01T00:00:00.000Z"],["Date","1970-01-01T00:00:00.000Z"],"markdown-style-guide",{"id":34,"data":36},{"tinaInfo":37,"title":40,"description":41,"pubDate":42,"updatedDate":43,"heroImage":21,"author":22,"category":23},{"filename":34,"basename":38,"path":39,"relativePath":38},"markdown-style-guide.mdx","src/content/blog/markdown-style-guide.mdx","Dlaczego Astro?","Poznaj zalety frameworka Astro w nowoczesnym frontendzie.",["Date","2024-06-05T00:00:00.000Z"],["Date","1970-01-01T00:00:00.000Z"],"third-post",{"id":44,"data":46},{"tinaInfo":47,"title":50,"description":51,"pubDate":52,"updatedDate":53,"heroImage":21,"author":22,"category":23},{"filename":44,"basename":48,"path":49,"relativePath":48},"third-post.mdx","src/content/blog/third-post.mdx","Third post","Lorem ipsum dolor sit amet",["Date","2022-07-21T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-mdx",{"id":54,"data":56},{"tinaInfo":57,"title":60,"description":51,"pubDate":61,"updatedDate":62,"heroImage":21,"author":22,"category":23},{"filename":54,"basename":58,"path":59,"relativePath":58},"using-mdx.mdx","src/content/blog/using-mdx.mdx","Using MDX?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-10",{"id":63,"data":65},{"tinaInfo":66,"title":69,"description":51,"pubDate":70,"updatedDate":71,"heroImage":21,"author":22,"category":23},{"filename":63,"basename":67,"path":68,"relativePath":67},"using-next-10.mdx","src/content/blog/using-next-10.mdx","Using MDX 10 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-11",{"id":72,"data":74},{"tinaInfo":75,"title":78,"description":51,"pubDate":79,"updatedDate":80,"heroImage":21,"author":22,"category":23},{"filename":72,"basename":76,"path":77,"relativePath":76},"using-next-11.mdx","src/content/blog/using-next-11.mdx","Using MDX 11 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-12",{"id":81,"data":83},{"tinaInfo":84,"title":87,"description":51,"pubDate":88,"updatedDate":89,"heroImage":21,"author":22,"category":23},{"filename":81,"basename":85,"path":86,"relativePath":85},"using-next-12.mdx","src/content/blog/using-next-12.mdx","Using MDX 12 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-13",{"id":90,"data":92},{"tinaInfo":93,"title":96,"description":51,"pubDate":97,"updatedDate":98,"heroImage":21,"author":22,"category":23},{"filename":90,"basename":94,"path":95,"relativePath":94},"using-next-13.mdx","src/content/blog/using-next-13.mdx","Using MDX 13 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-14",{"id":99,"data":101},{"tinaInfo":102,"title":105,"description":51,"pubDate":106,"updatedDate":107,"heroImage":21,"author":22,"category":23},{"filename":99,"basename":103,"path":104,"relativePath":103},"using-next-14.mdx","src/content/blog/using-next-14.mdx","Using MDX 14 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-15",{"id":108,"data":110},{"tinaInfo":111,"title":114,"description":51,"pubDate":115,"updatedDate":116,"heroImage":21,"author":22,"category":23},{"filename":108,"basename":112,"path":113,"relativePath":112},"using-next-15.mdx","src/content/blog/using-next-15.mdx","Using MDX 15 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-16",{"id":117,"data":119},{"tinaInfo":120,"title":123,"description":51,"pubDate":124,"updatedDate":125,"heroImage":21,"author":22,"category":23},{"filename":117,"basename":121,"path":122,"relativePath":121},"using-next-16.mdx","src/content/blog/using-next-16.mdx","Using MDX 16 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-17",{"id":126,"data":128},{"tinaInfo":129,"title":132,"description":51,"pubDate":133,"updatedDate":134,"heroImage":21,"author":22,"category":23},{"filename":126,"basename":130,"path":131,"relativePath":130},"using-next-17.mdx","src/content/blog/using-next-17.mdx","Using MDX 17 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-2",{"id":135,"data":137},{"tinaInfo":138,"title":141,"description":51,"pubDate":142,"updatedDate":143,"heroImage":21,"author":22,"category":23},{"filename":135,"basename":139,"path":140,"relativePath":139},"using-next-2.mdx","src/content/blog/using-next-2.mdx","Using MDX 2 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-3",{"id":144,"data":146},{"tinaInfo":147,"title":150,"description":51,"pubDate":151,"updatedDate":152,"heroImage":21,"author":22,"category":23},{"filename":144,"basename":148,"path":149,"relativePath":148},"using-next-3.mdx","src/content/blog/using-next-3.mdx","Using MDX 3 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-4",{"id":153,"data":155},{"tinaInfo":156,"title":159,"description":51,"pubDate":160,"updatedDate":161,"heroImage":21,"author":22,"category":23},{"filename":153,"basename":157,"path":158,"relativePath":157},"using-next-4.mdx","src/content/blog/using-next-4.mdx","Using MDX 4 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-5",{"id":162,"data":164},{"tinaInfo":165,"title":168,"description":51,"pubDate":169,"updatedDate":170,"heroImage":21,"author":22,"category":23},{"filename":162,"basename":166,"path":167,"relativePath":166},"using-next-5.mdx","src/content/blog/using-next-5.mdx","Using MDX 5 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-6",{"id":171,"data":173},{"tinaInfo":174,"title":177,"description":51,"pubDate":178,"updatedDate":179,"heroImage":21,"author":22,"category":23},{"filename":171,"basename":175,"path":176,"relativePath":175},"using-next-6.mdx","src/content/blog/using-next-6.mdx","Using MDX 6 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-7",{"id":180,"data":182},{"tinaInfo":183,"title":186,"description":51,"pubDate":187,"updatedDate":188,"heroImage":21,"author":22,"category":23},{"filename":180,"basename":184,"path":185,"relativePath":184},"using-next-7.mdx","src/content/blog/using-next-7.mdx","Using MDX 7 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-8",{"id":189,"data":191},{"tinaInfo":192,"title":195,"description":51,"pubDate":196,"updatedDate":197,"heroImage":21,"author":22,"category":23},{"filename":189,"basename":193,"path":194,"relativePath":193},"using-next-8.mdx","src/content/blog/using-next-8.mdx","Using MDX 8 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-9",{"id":198,"data":200},{"tinaInfo":201,"title":204,"description":51,"pubDate":205,"updatedDate":206,"heroImage":21,"author":22,"category":23},{"filename":198,"basename":202,"path":203,"relativePath":202},"using-next-9.mdx","src/content/blog/using-next-9.mdx","Using MDX 9 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-mdx",{"id":207,"data":209},{"tinaInfo":210,"title":213,"description":51,"pubDate":214,"updatedDate":215,"heroImage":21,"author":22,"category":23},{"filename":207,"basename":211,"path":212,"relativePath":211},"using-next-mdx.mdx","src/content/blog/using-next-mdx.mdx","Using MDX 2?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"page",["Map",218,219,250,251],"about",{"id":218,"data":220},{"tinaInfo":221,"seoTitle":224,"body":225},{"filename":218,"basename":222,"path":223,"relativePath":222},"about.mdx","src/content/page/about.mdx","About",{"type":226,"children":227},"root",[228,234,238,242,246],{"type":229,"children":230},"p",[231],{"type":232,"text":233},"text","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\nincididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer\nmalesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas\npretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac\nhabitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus\net malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam\nphasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse\nplatea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi.\nDictumst quisque sagittis purus sit amet.",{"type":229,"children":235},[236],{"type":232,"text":237},"Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum\nquisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet.\nTellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus.\nAccumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit\nullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa\ntincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim\nnunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui\nvivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris.\nSed tempus urna et pharetra pharetra massa massa ultricies mi.",{"type":229,"children":239},[240],{"type":232,"text":241},"Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam\nsit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis\ndonec. Egestas integer eget aliquet nibh praesent tristique magna sit amet.\nEget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum.\nTristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed\nviverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut\nconsequat semper viverra nam. Laoreet suspendisse interdum consectetur libero\nid faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique.\nRhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt\narcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate.\nViverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare.\nFringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo\ndonec enim.",{"type":229,"children":243},[244],{"type":232,"text":245},"Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut\nconsequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem\nviverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu\nac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac\ntortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus\npellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit\namet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id\ndonec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.",{"type":229,"children":247},[248],{"type":232,"text":249},"Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus\nimperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu\ncursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum.\nTincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero\nvolutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar\nproin gravida. Egestas integer eget aliquet nibh praesent tristique magna.","home",{"id":250,"data":252},{"tinaInfo":253,"seoTitle":256,"body":257},{"filename":250,"basename":254,"path":255,"relativePath":254},"home.mdx","src/content/page/home.mdx","Home",{"type":226,"children":258},[259,264,284,300,304,376],{"type":260,"children":261},"h1",[262],{"type":232,"text":263},"????? Hello, Astronaut!",{"type":229,"children":265},[266,268,275,277,282],{"type":232,"text":267},"Welcome to the official ",{"type":269,"url":270,"title":271,"children":272},"a","https://astro.build/",null,[273],{"type":232,"text":274},"Astro",{"type":232,"text":276}," + ",{"type":269,"url":278,"title":271,"children":279},"https://tina.io/",[280],{"type":232,"text":281},"TinaCMS",{"type":232,"text":283}," starter template! This template serves as a lightweight, minimally-styled starting point for anyone looking to build a personal website, blog, or portfolio with Astro and TinaCMS.",{"type":229,"children":285},[286,288,291,293,298],{"type":232,"text":287},"This template comes with a few integrations already configured in your ",{"type":232,"text":289,"code":290},"astro.config.mjs",true,{"type":232,"text":292}," file. You can customize this further with ",{"type":269,"url":294,"title":271,"children":295},"https://astro.build/integrations",[296],{"type":232,"text":297},"Astro Integrations",{"type":232,"text":299}," to add tools like Tailwind to your project.",{"type":229,"children":301},[302],{"type":232,"text":303},"Here are a few ideas on how to get started with the template:",{"type":305,"children":306},"ul",[307,325,341,349,364],{"type":308,"children":309},"li",[310],{"type":311,"children":312},"lic",[313,315,317,319,321,323],{"type":232,"text":314,"bold":290},"Edit this page",{"type":232,"text":316},": Navigate to ",{"type":232,"text":318,"code":290},"/admin",{"type":232,"text":320}," to update your homepage content in TinaCMS or manually edit ",{"type":232,"text":322,"code":290},"src/pages/index.astro",{"type":232,"text":324}," for full control.",{"type":308,"children":326},[327],{"type":311,"children":328},[329,331,333,335,337,339],{"type":232,"text":330,"bold":290},"Site Header",{"type":232,"text":332},": Customize the navigation items in TinaCMS under the ",{"type":232,"text":334,"bold":290},"Config Collection",{"type":232,"text":336}," or via ",{"type":232,"text":338,"code":290},"src/components/Header.astro",{"type":232,"text":340},".",{"type":308,"children":342},[343],{"type":311,"children":344},[345,347],{"type":232,"text":346,"bold":290},"Site Footer",{"type":232,"text":348},": Make it yours by adding your name or details in TinaCMS Global Config.",{"type":308,"children":350},[351],{"type":311,"children":352},[353,355,357,359,361,363],{"type":232,"text":354,"bold":290},"Explore Blog Posts",{"type":232,"text":356},": Check out sample posts in ",{"type":232,"text":358,"code":290},"src/content/blog",{"type":232,"text":360}," to see how content is structured or edit them in TinaCMS under the ",{"type":232,"text":362,"bold":290},"Blog Collection",{"type":232,"text":340},{"type":308,"children":365},[366],{"type":311,"children":367},[368,370,372,374],{"type":232,"text":369,"bold":290},"Layout Customization",{"type":232,"text":371},": Update the blog post page layout in ",{"type":232,"text":373,"code":290},"src/layouts/BlogPost.astro",{"type":232,"text":375}," for a unique look.",{"type":229,"children":377},[378,380,385,387,392,394,399],{"type":232,"text":379},"Have fun! If you get stuck, remember to check out the ",{"type":269,"url":381,"title":271,"children":382},"https://docs.astro.build/en/getting-started/",[383],{"type":232,"text":384},"Astro documentation",{"type":232,"text":386}," or ",{"type":269,"url":388,"title":271,"children":389},"https://tina.io/docs",[390],{"type":232,"text":391},"TinaCMS documentation",{"type":232,"text":393}," for guidance. You can also join the ",{"type":269,"url":395,"title":271,"children":396},"https://discord.com/invite/zumN63Ybpf",[397],{"type":232,"text":398},"TinaCMS Discord",{"type":232,"text":400}," community to ask questions and connect with other users."]
+[["Map",1,2,9,10,216,217],"meta::meta",["Map",3,4,5,6,7,8],"astro-version","5.9.2","content-config-digest","cfa1980b22b5bd1a","astro-config-digest","{\"root\":{},\"srcDir\":{},\"publicDir\":{},\"outDir\":{},\"cacheDir\":{},\"site\":\"http://localhost:4321\",\"compressHTML\":true,\"base\":\"/\",\"trailingSlash\":\"ignore\",\"output\":\"static\",\"scopedStyleStrategy\":\"attribute\",\"build\":{\"format\":\"directory\",\"client\":{},\"server\":{},\"assets\":\"_astro\",\"serverEntry\":\"entry.mjs\",\"redirects\":true,\"inlineStylesheets\":\"auto\",\"concurrency\":1},\"server\":{\"open\":false,\"host\":false,\"port\":4321,\"streaming\":true,\"allowedHosts\":[]},\"redirects\":{},\"image\":{\"endpoint\":{\"route\":\"/_image\"},\"service\":{\"entrypoint\":\"astro/assets/services/sharp\",\"config\":{}},\"domains\":[],\"remotePatterns\":[],\"experimentalDefaultStyles\":true},\"devToolbar\":{\"enabled\":true},\"markdown\":{\"syntaxHighlight\":{\"type\":\"shiki\",\"excludeLangs\":[\"math\"]},\"shikiConfig\":{\"langs\":[],\"langAlias\":{},\"theme\":\"github-dark\",\"themes\":{},\"wrap\":false,\"transformers\":[]},\"remarkPlugins\":[],\"rehypePlugins\":[],\"remarkRehype\":{},\"gfm\":true,\"smartypants\":true},\"security\":{\"checkOrigin\":true},\"env\":{\"schema\":{},\"validateSecrets\":false},\"experimental\":{\"clientPrerender\":false,\"contentIntellisense\":false,\"responsiveImages\":false,\"headingIdCompat\":false,\"preserveScriptOrder\":false,\"csp\":false},\"legacy\":{\"collections\":false}}","blog",["Map",11,12,24,25,34,35,44,45,54,55,63,64,72,73,81,82,90,91,99,100,108,109,117,118,126,127,135,136,144,145,153,154,162,163,171,172,180,181,189,190,198,199,207,208],"cms-integration",{"id":11,"data":13},{"tinaInfo":14,"title":17,"description":18,"pubDate":19,"updatedDate":20,"heroImage":21,"author":22,"category":23},{"filename":11,"basename":15,"path":16,"relativePath":15},"cms-integration.mdx","src/content/blog/cms-integration.mdx","Integracja z TinaCMS","Jak po³¹czyæ Astro z TinaCMS i tworzyæ dynamiczne strony.",["Date","2024-06-10T00:00:00.000Z"],["Date","1970-01-01T00:00:00.000Z"],"/blog-placeholder.jpg","xyx","abc","hello-world",{"id":24,"data":26},{"tinaInfo":27,"title":30,"description":31,"pubDate":32,"updatedDate":33,"heroImage":21,"author":22,"category":23},{"filename":24,"basename":28,"path":29,"relativePath":28},"hello-world.mdx","src/content/blog/hello-world.mdx","Witaj, œwiecie!","Pierwszy wpis na blogu. Krótkie powitanie i cel istnienia tej strony.",["Date","2024-06-01T00:00:00.000Z"],["Date","1970-01-01T00:00:00.000Z"],"markdown-style-guide",{"id":34,"data":36},{"tinaInfo":37,"title":40,"description":41,"pubDate":42,"updatedDate":43,"heroImage":21,"author":22,"category":23},{"filename":34,"basename":38,"path":39,"relativePath":38},"markdown-style-guide.mdx","src/content/blog/markdown-style-guide.mdx","Dlaczego Astro?","Poznaj zalety frameworka Astro w nowoczesnym frontendzie.",["Date","2024-06-05T00:00:00.000Z"],["Date","1970-01-01T00:00:00.000Z"],"third-post",{"id":44,"data":46},{"tinaInfo":47,"title":50,"description":51,"pubDate":52,"updatedDate":53,"heroImage":21,"author":22,"category":23},{"filename":44,"basename":48,"path":49,"relativePath":48},"third-post.mdx","src/content/blog/third-post.mdx","Third post","Lorem ipsum dolor sit amet",["Date","2022-07-21T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-mdx",{"id":54,"data":56},{"tinaInfo":57,"title":60,"description":51,"pubDate":61,"updatedDate":62,"heroImage":21,"author":22,"category":23},{"filename":54,"basename":58,"path":59,"relativePath":58},"using-mdx.mdx","src/content/blog/using-mdx.mdx","Using MDX?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-10",{"id":63,"data":65},{"tinaInfo":66,"title":69,"description":51,"pubDate":70,"updatedDate":71,"heroImage":21,"author":22,"category":23},{"filename":63,"basename":67,"path":68,"relativePath":67},"using-next-10.mdx","src/content/blog/using-next-10.mdx","Using MDX 10 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-11",{"id":72,"data":74},{"tinaInfo":75,"title":78,"description":51,"pubDate":79,"updatedDate":80,"heroImage":21,"author":22,"category":23},{"filename":72,"basename":76,"path":77,"relativePath":76},"using-next-11.mdx","src/content/blog/using-next-11.mdx","Using MDX 11 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-12",{"id":81,"data":83},{"tinaInfo":84,"title":87,"description":51,"pubDate":88,"updatedDate":89,"heroImage":21,"author":22,"category":23},{"filename":81,"basename":85,"path":86,"relativePath":85},"using-next-12.mdx","src/content/blog/using-next-12.mdx","Using MDX 12 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-13",{"id":90,"data":92},{"tinaInfo":93,"title":96,"description":51,"pubDate":97,"updatedDate":98,"heroImage":21,"author":22,"category":23},{"filename":90,"basename":94,"path":95,"relativePath":94},"using-next-13.mdx","src/content/blog/using-next-13.mdx","Using MDX 13 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-14",{"id":99,"data":101},{"tinaInfo":102,"title":105,"description":51,"pubDate":106,"updatedDate":107,"heroImage":21,"author":22,"category":23},{"filename":99,"basename":103,"path":104,"relativePath":103},"using-next-14.mdx","src/content/blog/using-next-14.mdx","Using MDX 14 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-15",{"id":108,"data":110},{"tinaInfo":111,"title":114,"description":51,"pubDate":115,"updatedDate":116,"heroImage":21,"author":22,"category":23},{"filename":108,"basename":112,"path":113,"relativePath":112},"using-next-15.mdx","src/content/blog/using-next-15.mdx","Using MDX 15 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-16",{"id":117,"data":119},{"tinaInfo":120,"title":123,"description":51,"pubDate":124,"updatedDate":125,"heroImage":21,"author":22,"category":23},{"filename":117,"basename":121,"path":122,"relativePath":121},"using-next-16.mdx","src/content/blog/using-next-16.mdx","Using MDX 16 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-17",{"id":126,"data":128},{"tinaInfo":129,"title":132,"description":51,"pubDate":133,"updatedDate":134,"heroImage":21,"author":22,"category":23},{"filename":126,"basename":130,"path":131,"relativePath":130},"using-next-17.mdx","src/content/blog/using-next-17.mdx","Using MDX 17 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-2",{"id":135,"data":137},{"tinaInfo":138,"title":141,"description":51,"pubDate":142,"updatedDate":143,"heroImage":21,"author":22,"category":23},{"filename":135,"basename":139,"path":140,"relativePath":139},"using-next-2.mdx","src/content/blog/using-next-2.mdx","Using MDX 2 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-3",{"id":144,"data":146},{"tinaInfo":147,"title":150,"description":51,"pubDate":151,"updatedDate":152,"heroImage":21,"author":22,"category":23},{"filename":144,"basename":148,"path":149,"relativePath":148},"using-next-3.mdx","src/content/blog/using-next-3.mdx","Using MDX 3 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-4",{"id":153,"data":155},{"tinaInfo":156,"title":159,"description":51,"pubDate":160,"updatedDate":161,"heroImage":21,"author":22,"category":23},{"filename":153,"basename":157,"path":158,"relativePath":157},"using-next-4.mdx","src/content/blog/using-next-4.mdx","Using MDX 4 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-5",{"id":162,"data":164},{"tinaInfo":165,"title":168,"description":51,"pubDate":169,"updatedDate":170,"heroImage":21,"author":22,"category":23},{"filename":162,"basename":166,"path":167,"relativePath":166},"using-next-5.mdx","src/content/blog/using-next-5.mdx","Using MDX 5 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-6",{"id":171,"data":173},{"tinaInfo":174,"title":177,"description":51,"pubDate":178,"updatedDate":179,"heroImage":21,"author":22,"category":23},{"filename":171,"basename":175,"path":176,"relativePath":175},"using-next-6.mdx","src/content/blog/using-next-6.mdx","Using MDX 6 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-7",{"id":180,"data":182},{"tinaInfo":183,"title":186,"description":51,"pubDate":187,"updatedDate":188,"heroImage":21,"author":22,"category":23},{"filename":180,"basename":184,"path":185,"relativePath":184},"using-next-7.mdx","src/content/blog/using-next-7.mdx","Using MDX 7 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-8",{"id":189,"data":191},{"tinaInfo":192,"title":195,"description":51,"pubDate":196,"updatedDate":197,"heroImage":21,"author":22,"category":23},{"filename":189,"basename":193,"path":194,"relativePath":193},"using-next-8.mdx","src/content/blog/using-next-8.mdx","Using MDX 8 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-9",{"id":198,"data":200},{"tinaInfo":201,"title":204,"description":51,"pubDate":205,"updatedDate":206,"heroImage":21,"author":22,"category":23},{"filename":198,"basename":202,"path":203,"relativePath":202},"using-next-9.mdx","src/content/blog/using-next-9.mdx","Using MDX 9 next?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"using-next-mdx",{"id":207,"data":209},{"tinaInfo":210,"title":213,"description":51,"pubDate":214,"updatedDate":215,"heroImage":21,"author":22,"category":23},{"filename":207,"basename":211,"path":212,"relativePath":211},"using-next-mdx.mdx","src/content/blog/using-next-mdx.mdx","Using MDX 2?!",["Date","2024-05-31T14:00:00.000Z"],["Date","2025-01-02T14:00:00.000Z"],"page",["Map",218,219,250,251],"about",{"id":218,"data":220},{"tinaInfo":221,"seoTitle":224,"body":225},{"filename":218,"basename":222,"path":223,"relativePath":222},"about.mdx","src/content/page/about.mdx","About",{"type":226,"children":227},"root",[228,234,238,242,246],{"type":229,"children":230},"p",[231],{"type":232,"text":233},"text","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\nincididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer\nmalesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas\npretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac\nhabitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus\net malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam\nphasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse\nplatea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi.\nDictumst quisque sagittis purus sit amet.",{"type":229,"children":235},[236],{"type":232,"text":237},"Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum\nquisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet.\nTellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus.\nAccumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit\nullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa\ntincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim\nnunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui\nvivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris.\nSed tempus urna et pharetra pharetra massa massa ultricies mi.",{"type":229,"children":239},[240],{"type":232,"text":241},"Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam\nsit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis\ndonec. Egestas integer eget aliquet nibh praesent tristique magna sit amet.\nEget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum.\nTristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed\nviverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut\nconsequat semper viverra nam. Laoreet suspendisse interdum consectetur libero\nid faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique.\nRhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt\narcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate.\nViverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare.\nFringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo\ndonec enim.",{"type":229,"children":243},[244],{"type":232,"text":245},"Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut\nconsequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem\nviverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu\nac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac\ntortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus\npellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit\namet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id\ndonec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.",{"type":229,"children":247},[248],{"type":232,"text":249},"Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus\nimperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu\ncursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum.\nTincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero\nvolutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar\nproin gravida. Egestas integer eget aliquet nibh praesent tristique magna.","home",{"id":250,"data":252},{"tinaInfo":253,"seoTitle":256,"body":257},{"filename":250,"basename":254,"path":255,"relativePath":254},"home.mdx","src/content/page/home.mdx","Home",{"type":226,"children":258},[259,264,284,300,304,376],{"type":260,"children":261},"h1",[262],{"type":232,"text":263},"????? Hello, Astronaut!",{"type":229,"children":265},[266,268,275,277,282],{"type":232,"text":267},"Welcome to the official ",{"type":269,"url":270,"title":271,"children":272},"a","https://astro.build/",null,[273],{"type":232,"text":274},"Astro",{"type":232,"text":276}," + ",{"type":269,"url":278,"title":271,"children":279},"https://tina.io/",[280],{"type":232,"text":281},"TinaCMS",{"type":232,"text":283}," starter template! This template serves as a lightweight, minimally-styled starting point for anyone looking to build a personal website, blog, or portfolio with Astro and TinaCMS.",{"type":229,"children":285},[286,288,291,293,298],{"type":232,"text":287},"This template comes with a few integrations already configured in your ",{"type":232,"text":289,"code":290},"astro.config.mjs",true,{"type":232,"text":292}," file. You can customize this further with ",{"type":269,"url":294,"title":271,"children":295},"https://astro.build/integrations",[296],{"type":232,"text":297},"Astro Integrations",{"type":232,"text":299}," to add tools like Tailwind to your project.",{"type":229,"children":301},[302],{"type":232,"text":303},"Here are a few ideas on how to get started with the template:",{"type":305,"children":306},"ul",[307,325,341,349,364],{"type":308,"children":309},"li",[310],{"type":311,"children":312},"lic",[313,315,317,319,321,323],{"type":232,"text":314,"bold":290},"Edit this page",{"type":232,"text":316},": Navigate to ",{"type":232,"text":318,"code":290},"/admin",{"type":232,"text":320}," to update your homepage content in TinaCMS or manually edit ",{"type":232,"text":322,"code":290},"src/pages/index.astro",{"type":232,"text":324}," for full control.",{"type":308,"children":326},[327],{"type":311,"children":328},[329,331,333,335,337,339],{"type":232,"text":330,"bold":290},"Site Header",{"type":232,"text":332},": Customize the navigation items in TinaCMS under the ",{"type":232,"text":334,"bold":290},"Config Collection",{"type":232,"text":336}," or via ",{"type":232,"text":338,"code":290},"src/components/Header.astro",{"type":232,"text":340},".",{"type":308,"children":342},[343],{"type":311,"children":344},[345,347],{"type":232,"text":346,"bold":290},"Site Footer",{"type":232,"text":348},": Make it yours by adding your name or details in TinaCMS Global Config.",{"type":308,"children":350},[351],{"type":311,"children":352},[353,355,357,359,361,363],{"type":232,"text":354,"bold":290},"Explore Blog Posts",{"type":232,"text":356},": Check out sample posts in ",{"type":232,"text":358,"code":290},"src/content/blog",{"type":232,"text":360}," to see how content is structured or edit them in TinaCMS under the ",{"type":232,"text":362,"bold":290},"Blog Collection",{"type":232,"text":340},{"type":308,"children":365},[366],{"type":311,"children":367},[368,370,372,374],{"type":232,"text":369,"bold":290},"Layout Customization",{"type":232,"text":371},": Update the blog post page layout in ",{"type":232,"text":373,"code":290},"src/layouts/BlogPost.astro",{"type":232,"text":375}," for a unique look.",{"type":229,"children":377},[378,380,385,387,392,394,399],{"type":232,"text":379},"Have fun! If you get stuck, remember to check out the ",{"type":269,"url":381,"title":271,"children":382},"https://docs.astro.build/en/getting-started/",[383],{"type":232,"text":384},"Astro documentation",{"type":232,"text":386}," or ",{"type":269,"url":388,"title":271,"children":389},"https://tina.io/docs",[390],{"type":232,"text":391},"TinaCMS documentation",{"type":232,"text":393}," for guidance. You can also join the ",{"type":269,"url":395,"title":271,"children":396},"https://discord.com/invite/zumN63Ybpf",[397],{"type":232,"text":398},"TinaCMS Discord",{"type":232,"text":400}," community to ask questions and connect with other users."]
 
 .astro\settings.json
 {
@@ -451,6 +451,51 @@ declare module 'astro:content' {
         "pubDate",
         "author",
         "category"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
+
+.astro\collections\footer.schema.json
+{
+  "$ref": "#/definitions/footer",
+  "definitions": {
+    "footer": {
+      "type": "object",
+      "properties": {
+        "tinaInfo": {
+          "type": "object",
+          "properties": {
+            "filename": {
+              "type": "string"
+            },
+            "basename": {
+              "type": "string"
+            },
+            "path": {
+              "type": "string"
+            },
+            "relativePath": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "filename",
+            "basename",
+            "path",
+            "relativePath"
+          ],
+          "additionalProperties": false
+        },
+        "body": {},
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "tinaInfo"
       ],
       "additionalProperties": false
     }
@@ -618,6 +663,7 @@ const page = defineCollection({
     body: z.any(),
   }),
 });
+
 export const collections = { blog, page };
 
 
@@ -719,94 +765,44 @@ const { title, pubDate, description, category, heroImage, author } = post.data;
 
 src\components\Footer.astro
 ---
+import { getEntry } from 'astro:content';
+import client from '../../tina/__generated__/client';
+import FooterText from '../../tina/pages/FooterText';
 import config from '../content/config/config.json';
+import HeaderLink from './HeaderLink.astro';
 import IconLink from './react/IconLink';
 const today = new Date();
+
+const footerNav = config['footerNav'];
+
+const footerData = await client.queries.footer({ relativePath: 'footer.mdx' });
 ---
 
-<footer class="copyright-footer" role="contentinfo">
-  &copy; {today.getFullYear()}
-  {config.seo.siteOwner}. All rights reserved.
-  <div class="social-links">
-    {
-      config?.contactLinks?.map((link) => {
-        return <IconLink {...link} className="default-class" />;
-      })
-    }
+<footer class="bg-[#1f1e24] text-white px-4 py-10 text-sm">
+  <div class="grid gap-8 md:grid-cols-3">
+    <div class="flex">
+      <FooterText {...footerData} client:load />
+    </div>
+
+    <div class="flex justify-center">
+      {config.contactLinks?.map((link) => <IconLink {...link} className="text-white hover:text-orange-500" />)}
+    </div>
+
+    <ul class="flex gap-3 justify-end">
+      {
+        footerNav.map((item) => (
+          <HeaderLink href={item.link} isFooter>
+            {item.title}
+          </HeaderLink>
+        ))
+      }
+    </ul>
+  </div>
+
+  <div class="mt-10 flex justify-center gap-4">
+    <p class="text-slate-50 text-xs">&copy; {today.getFullYear()} {config.seo.siteOwner}. All rights reserved.</p>
   </div>
 </footer>
-
-<style>
-  .copyright-footer {
-    padding: 2em 1em 2em 1em;
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
-    color: rgb(var(--gray));
-    text-align: center;
-  }
-
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    margin-top: 1em;
-  }
-
-  .social-links a {
-    text-decoration: none;
-    color: rgb(var(--gray));
-  }
-
-  .social-links a:hover {
-    color: rgb(var(--gray-dark));
-  }
-
-  .tina-footer {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    background-image: linear-gradient(60deg, #000000 0%, #ec4815 50%, #000000 100%);
-    padding: 1.5em 0;
-  }
-
-  .tina-banner-content {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    font-size: 1.2em;
-    position: relative;
-    z-index: 2;
-  }
-
-  .tina-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -50%;
-    width: 200%;
-    height: 100%;
-    background-image: linear-gradient(60deg, #1f1e24 25%, #ec4815 50%, #1f1e24 75%);
-    transition: transform 1s ease-in-out;
-    z-index: 1;
-  }
-
-  .tina-footer:has(.tina-banner-content a:hover)::before {
-    transform: scaleX(2);
-  }
-
-  .tina-banner-content img {
-    width: 30px;
-    height: auto;
-  }
-
-  .tina-banner-content a {
-    color: white;
-    text-decoration: none;
-    padding-top: 0.5em;
-    font-weight: bold;
-  }
-</style>
 
 
 src\components\FormattedDate.astro
@@ -940,20 +936,22 @@ src\components\HeaderLink.astro
 import type { HTMLAttributes } from 'astro/types';
 import classNames from 'classnames';
 
-type Props = HTMLAttributes<'a'>;
+type Props = HTMLAttributes<'a'> & {
+  isFooter?: boolean;
+};
 
-const { href, class: className, ...props } = Astro.props;
+const { href, class: className, isFooter = false, ...props } = Astro.props;
 const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
 const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
+const classLink = classNames('flex p-2 font-bold hover:text-orange-500', {
+  'text-orange-500': isActive,
+  'text-sky-800': !isActive && !isFooter,
+  'text-white': !isActive && isFooter,
+});
 ---
 
-<a
-  href={href}
-  class={classNames('flex p-2 font-bold hover:text-indigo-500', { 'text-orange-500': isActive, 'text-sky-800': !isActive })}
-  aria-current={isActive ? 'page' : undefined}
-  {...props}
->
+<a href={href} class={classLink} aria-current={isActive ? 'page' : undefined} {...props}>
   <slot />
 </a>
 
@@ -995,7 +993,7 @@ src\components\Pagination.astro
 const { currentPage, totalPages, baseUrl } = Astro.props;
 ---
 
-<nav class="mt-12 flex justify-center space-x-2 text-sm">
+<nav class="mt-12 flex justify-center space-x-2 text-sm mb-4">
   {
     Array.from({ length: totalPages }, (_, i) => {
       const page = i + 1;
@@ -1111,6 +1109,20 @@ src\content\config\config.json
       "title": "GitHub",
       "link": "https://github.com/jaman7?tab=repositories",
       "icon": "TbBrandGithub"
+    }
+  ],
+  "footerNav": [
+    {
+      "title": "Home",
+      "link": "/"
+    },
+    {
+      "title": "Blog",
+      "link": "/blog"
+    },
+    {
+      "title": "About",
+      "link": "/about"
     }
   ]
 }
@@ -1361,19 +1373,15 @@ src\styles\global.css
 tina\config.ts
 import { defineConfig } from 'tinacms';
 import { BlogCollection } from './collections/blog';
-import { FooterLinksCollection } from './collections/footer-links';
+import { footerCollection } from './collections/footer';
 import { GlobalConfigCollection } from './collections/global-config';
 import { PageCollection } from './collections/page';
 
-// Your hosting provider likely exposes this as an environment variable
 const branch = process.env.GITHUB_BRANCH || 'main';
 
 export default defineConfig({
   branch,
-
-  // Get this from tina.io
   clientId: process.env.TINA_PUBLIC_CLIENT_ID,
-  // Get this from tina.io
   token: process.env.TINA_TOKEN,
 
   build: {
@@ -1386,9 +1394,8 @@ export default defineConfig({
       publicFolder: 'public',
     },
   },
-  // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
-    collections: [BlogCollection, PageCollection, GlobalConfigCollection, FooterLinksCollection],
+    collections: [BlogCollection, PageCollection, GlobalConfigCollection, footerCollection],
   },
 });
 
@@ -1454,26 +1461,23 @@ export const BlogCollection: Collection = {
 };
 
 
-tina\collections\footer-links.ts
+tina\collections\footer.ts
 import type { Collection } from 'tinacms';
 
-export const FooterLinksCollection: Collection = {
-  label: 'Footer Links',
-  name: 'footerLinks',
-  path: 'src/content/footer-links',
-  format: 'json',
+export const footerCollection: Collection = {
+  label: 'Footer',
+  name: 'footer',
+  path: 'src/content/footer',
+  format: 'mdx',
+  ui: {
+    allowedActions: { create: false, delete: false }, // tylko edycja
+  },
   fields: [
     {
-      name: 'title',
-      label: 'Title',
-      type: 'string',
-      required: true,
-    },
-    {
-      name: 'link',
-      label: 'Link',
-      type: 'string',
-      required: true,
+      name: 'body',
+      label: 'Footer Text',
+      type: 'rich-text',
+      isBody: true,
     },
   ],
 };
@@ -1583,11 +1587,31 @@ export const GlobalConfigCollection: Collection = {
       ],
     },
     {
-      name: 'footerText',
-      label: 'Footer Text',
-      type: 'rich-text',
-      isBody: true,
-      parser: { type: 'mdx' },
+      name: 'footerNav',
+      label: 'Footer Site Navigation Menu (Reorder, Add, Remove)',
+      type: 'object',
+      list: true,
+      ui: {
+        itemProps: (item) => {
+          return {
+            label: item.title,
+          };
+        },
+      },
+      fields: [
+        {
+          name: 'title',
+          label: 'Title of Nav Item',
+          type: 'string',
+          required: true,
+        },
+        {
+          name: 'link',
+          label: 'Path of the Nav Item',
+          type: 'string',
+          required: true,
+        },
+      ],
     },
 
     // Add other config fields here...
@@ -1820,6 +1844,32 @@ export default function AdminBlogPost(props: Props) {
     </article>
   );
 }
+
+
+tina\pages\FooterText.tsx
+import { useTina } from 'tinacms/dist/react';
+import { TinaMarkdown } from 'tinacms/dist/rich-text';
+import type { FooterQuery, FooterQueryVariables } from '../../tina/__generated__/types';
+
+type Props = {
+  variables: FooterQueryVariables;
+  data: FooterQuery;
+  query: string;
+};
+
+const FooterText = (props: Props) => {
+  const { data } = useTina({
+    query: props.query,
+    variables: props.variables,
+    data: props.data,
+  });
+
+  const footer = data.footer;
+
+  return <TinaMarkdown content={footer?.body} />;
+};
+
+export default FooterText;
 
 
 tina\pages\HomePage.tsx
