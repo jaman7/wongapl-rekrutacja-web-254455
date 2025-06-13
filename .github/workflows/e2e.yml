@@ -1,7 +1,7 @@
 name: E2E Tests and Lighthouse Audit
 
 on:
-  pull_request:
+  push:
     branches: [main]
 
 jobs:
@@ -91,6 +91,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ${{ secrets.CLOUDFLARE_E2E_PROJECT }}
+          projectName: ${{ vars.CLOUDFLARE_E2E_PROJECT }}
           directory: playwright-report
           branch: main
