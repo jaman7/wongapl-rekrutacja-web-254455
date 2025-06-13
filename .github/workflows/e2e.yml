@@ -29,6 +29,12 @@ jobs:
       - name: Run Playwright Tests
         run: npx playwright test --reporter=html
 
+      - name: Copy Playwright HTML Report to Root
+        run: |
+          mkdir -p playwright-report/html-report
+          cp -r playwright-report/index.html/* playwright-report/html-report/
+          cp -r playwright-report/html-report/* playwright-report/
+
       - name: Upload HTML report artifact
         uses: actions/upload-artifact@v4
         with:
@@ -69,7 +75,7 @@ jobs:
             --numberOfRuns=3 \
             --config=./.lighthouserc.js || echo "Lighthouse failed, continuing..."
 
-          # Kopiowanie raportów
+          # Kopiowanie raportów Lighthouse
           cp .lighthouseci/*.html playwright-report/lighthouse/
 
           # Tworzenie index.html w folderze lighthouse
@@ -78,10 +84,14 @@ jobs:
             fname=$(basename "$file")
             echo "<li><a href='$fname'>$fname</a></li>" >> playwright-report/lighthouse/index.html
           done
+          echo "<li><a href='../report.html'>Playwright Report</a></li>" >> playwright-report/lighthouse/index.html
           echo "</ul></body></html>" >> playwright-report/lighthouse/index.html
 
-          # Redirect z root do indexu w lighthouse/
-          echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Redirect</title><script>window.location.href='./lighthouse/index.html';</script></head><body>If not redirected, <a href='./lighthouse/index.html'>click here</a>.</body></html>" > playwright-report/index.html
+          # Główna strona - linki do raportów
+          echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>E2E Reports</title></head><body><h1>E2E Reports</h1><ul>" > playwright-report/index.html
+          echo "<li><a href='report.html'>Playwright Report</a></li>" >> playwright-report/index.html
+          echo "<li><a href='lighthouse/index.html'>Lighthouse Report</a></li>" >> playwright-report/index.html
+          echo "</ul></body></html>" >> playwright-report/index.html
 
       - name: Upload Combined Report
         uses: actions/upload-artifact@v4
