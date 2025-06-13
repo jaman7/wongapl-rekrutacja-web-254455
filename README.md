@@ -99,6 +99,11 @@ npm run lighthouse:local
 - TinaCMS allows editing MDX content (blog, page) and JSON data (config.json).
 - Editable from /admin in "Preview Mode" (iframe).
 - Custom client:tina directive provides safe rendering in Astro.
+![5](https://github.com/user-attachments/assets/6c576a0d-00c7-44f9-9907-d7c5c27b17be)
+![4](https://github.com/user-attachments/assets/5b7be778-50ef-4d22-b1df-0891a295379e)
+![3](https://github.com/user-attachments/assets/c90feb65-368c-43c2-b875-112e028b2ce3)
+![2](https://github.com/user-attachments/assets/33a60bce-1ab4-4f2f-b384-59c9866317a7)
+![1](https://github.com/user-attachments/assets/d5d6dd0c-9325-4f49-90f2-b53cb5e375d2)
 
 ## Application preview
 
