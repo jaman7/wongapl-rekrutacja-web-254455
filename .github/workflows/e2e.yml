@@ -29,11 +29,9 @@ jobs:
       - name: Run Playwright Tests
         run: npx playwright test --reporter=html
 
-      - name: Copy Playwright HTML Report to Root
+      - name: Rename Playwright Report Index
         run: |
-          mkdir -p playwright-report/html-report
-          cp -r playwright-report/index.html/* playwright-report/html-report/
-          cp -r playwright-report/html-report/* playwright-report/
+          mv playwright-report/index.html playwright-report/report.html
 
       - name: Upload HTML report artifact
         uses: actions/upload-artifact@v4
