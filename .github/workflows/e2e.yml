@@ -1,8 +1,10 @@
 name: E2E Tests and Lighthouse Audit
 
 on:
-  push:
-    branches: [main]
+  workflow_run:
+    workflows: ['Deploy to Cloudflare Workers']
+    types:
+      - completed
 
 jobs:
   e2e-tests:
@@ -28,7 +30,7 @@ jobs:
         run: npx playwright test --project=chromium --reporter=html
 
       - name: Upload HTML report artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: playwright-report
           path: playwright-report
@@ -51,7 +53,7 @@ jobs:
         run: npm install -g @lhci/cli
 
       - name: Download Playwright Report
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: playwright-report
           path: playwright-report
