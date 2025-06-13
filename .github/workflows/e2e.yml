@@ -61,13 +61,26 @@ jobs:
       - name: Run Lighthouse CI and Export HTML Reports
         run: |
           mkdir -p playwright-report/lighthouse
+
           lhci collect \
             --url=https://jaman7-wongapl-rekrutacja-web-254455.pages.dev \
             --url=https://jaman7-wongapl-rekrutacja-web-254455.pages.dev/blog \
             --url=https://jaman7-wongapl-rekrutacja-web-254455.pages.dev/blog/page/1 \
             --numberOfRuns=3 \
             --config=./.lighthouserc.js || echo "Lighthouse failed, continuing..."
+
+          # Kopiowanie raportów
           cp .lighthouseci/*.html playwright-report/lighthouse/
+
+          # Tworzenie index.html w folderze lighthouse
+          echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Lighthouse Reports</title></head><body><h1>Lighthouse Reports</h1><ul>" > playwright-report/lighthouse/index.html
+          for file in playwright-report/lighthouse/*.html; do
+            fname=$(basename "$file")
+            echo "<li><a href='$fname'>$fname</a></li>" >> playwright-report/lighthouse/index.html
+          done
+          echo "</ul></body></html>" >> playwright-report/lighthouse/index.html
+
+          # Redirect z root do indexu w lighthouse/
           echo "<meta http-equiv='refresh' content='./lighthouse/index.html'>" > playwright-report/index.html
 
       - name: Upload Combined Report
