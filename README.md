@@ -99,16 +99,11 @@ npm run lighthouse:local
 - TinaCMS allows editing MDX content (blog, page) and JSON data (config.json).
 - Editable from /admin in "Preview Mode" (iframe).
 - Custom client:tina directive provides safe rendering in Astro.
-![5](https://github.com/user-attachments/assets/6c576a0d-00c7-44f9-9907-d7c5c27b17be)
-![4](https://github.com/user-attachments/assets/5b7be778-50ef-4d22-b1df-0891a295379e)
-![3](https://github.com/user-attachments/assets/c90feb65-368c-43c2-b875-112e028b2ce3)
-![2](https://github.com/user-attachments/assets/33a60bce-1ab4-4f2f-b384-59c9866317a7)
-![1](https://github.com/user-attachments/assets/d5d6dd0c-9325-4f49-90f2-b53cb5e375d2)
 
 ## Application preview
 
-![Home]([https://github.com/user-attachments/assets/cc525028-a0dd-4149-b608-9e664eac4c1e)
-![Home + footer](https://github.com/user-attachments/assets/ef2e3edf-a332-4e78-9622-b5be362c7bc9)
-![blogs](https://github.com/user-attachments/assets/3dd5e254-00f7-4314-92da-852e4454bba6)
-![blog post](https://github.com/user-attachments/assets/3dd5e254-00f7-4314-92da-852e4454bba6)
-![about](https://github.com/user-attachments/assets/3dd5e254-00f7-4314-92da-852e4454bba6)
+![Home](https://github.com/user-attachments/assets/d5d6dd0c-9325-4f49-90f2-b53cb5e375d2)
+![Home + footer](https://github.com/user-attachments/assets/33a60bce-1ab4-4f2f-b384-59c9866317a7)
+![blogs](https://github.com/user-attachments/assets/c90feb65-368c-43c2-b875-112e028b2ce3)
+![blog post](https://github.com/user-attachments/assets/5b7be778-50ef-4d22-b1df-0891a295379e)
+![about](https://github.com/user-attachments/assets/6c576a0d-00c7-44f9-9907-d7c5c27b17be)
