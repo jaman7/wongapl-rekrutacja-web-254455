@@ -7,6 +7,6 @@ export default defineConfig({
   reporter: [['html']],
   use: {
     headless: true,
-    baseURL: 'http://localhost:4321', // domyślny port Astro
+    baseURL: 'https://jaman7-wongapl-rekrutacja-web-254455.pages.dev',
   },
 });
