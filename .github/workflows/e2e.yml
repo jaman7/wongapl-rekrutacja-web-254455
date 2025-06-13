@@ -81,7 +81,7 @@ jobs:
           echo "</ul></body></html>" >> playwright-report/lighthouse/index.html
 
           # Redirect z root do indexu w lighthouse/
-          echo "<meta http-equiv='refresh' content='./lighthouse/index.html'>" > playwright-report/index.html
+          echo "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Redirect</title><script>window.location.href='./lighthouse/index.html';</script></head><body>If not redirected, <a href='./lighthouse/index.html'>click here</a>.</body></html>" > playwright-report/index.html
 
       - name: Upload Combined Report
         uses: actions/upload-artifact@v4
