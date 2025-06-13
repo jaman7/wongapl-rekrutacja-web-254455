@@ -102,6 +102,8 @@ npm run lighthouse:local
 
 ## Application preview
 
-![Logic Gate Simulator](https://github.com/user-attachments/assets/aaa7c7f0-2dbb-48c9-8d02-15fa931799ac)
-![Logic Minimizer Table](https://github.com/user-attachments/assets/ef2e3edf-a332-4e78-9622-b5be362c7bc9)
-![Logic Minimizer Schematic](https://github.com/user-attachments/assets/3dd5e254-00f7-4314-92da-852e4454bba6)
+![Home](https://github.com/user-attachments/assets/aaa7c7f0-2dbb-48c9-8d02-15fa931799ac)
+![Home + footer](https://github.com/user-attachments/assets/ef2e3edf-a332-4e78-9622-b5be362c7bc9)
+![blogs](https://github.com/user-attachments/assets/3dd5e254-00f7-4314-92da-852e4454bba6)
+![blog post](https://github.com/user-attachments/assets/3dd5e254-00f7-4314-92da-852e4454bba6)
+![about](https://github.com/user-attachments/assets/3dd5e254-00f7-4314-92da-852e4454bba6)
