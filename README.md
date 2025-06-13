@@ -76,16 +76,18 @@ npm run lighthouse:local
 
 ## Architecture
 
+```
 ├── src/
-│ ├── pages/ # Strony Astro (.astro)
-│ ├── components/ # Komponenty UI (Astro + React)
-│ ├── content/ # Zawartość TinaCMS (mdx + json)
-│ ├── layouts/ # Układy stron
-├── tina/ # Konfiguracja CMS
-├── public/ # Pliki statyczne
-├── tests/ # Testy Playwright
-├── astro.config.mjs # Konfiguracja Astro
+│ ├── pages/ # Astro Pages (.astro)
+│ ├── components/ # UI components (Astro + React)
+│ ├── content/ # TinaCMS Content (mdx + json)
+│ ├── layouts/ # Page Layouts
+├── tina/ # CMS configuration
+├── public/ # Static files
+├── tests/ # Tests Playwright
+├── astro.config.mjs # Astro Configuration
 └── wrangler.toml # Deploy do Cloudflare Pages
+```
 
 ---
 
