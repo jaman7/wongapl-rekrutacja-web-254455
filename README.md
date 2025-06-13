@@ -100,9 +100,10 @@ npm run lighthouse:local
 - Editable from /admin in "Preview Mode" (iframe).
 - Custom client:tina directive provides safe rendering in Astro.
 
-## Application preview
+## Application preview![1](https://github.com/user-attachments/assets/cc525028-a0dd-4149-b608-9e664eac4c1e)
 
-![Home](https://github.com/user-attachments/assets/aaa7c7f0-2dbb-48c9-8d02-15fa931799ac)
+
+![Home]([https://github.com/user-attachments/assets/cc525028-a0dd-4149-b608-9e664eac4c1e)
 ![Home + footer](https://github.com/user-attachments/assets/ef2e3edf-a332-4e78-9622-b5be362c7bc9)
 ![blogs](https://github.com/user-attachments/assets/3dd5e254-00f7-4314-92da-852e4454bba6)
 ![blog post](https://github.com/user-attachments/assets/3dd5e254-00f7-4314-92da-852e4454bba6)
