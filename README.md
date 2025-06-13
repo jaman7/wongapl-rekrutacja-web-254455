@@ -70,6 +70,9 @@ npm run test:e2e:report
 
 # Local Lighthouse (requires global @lhci/cli)
 npm run lighthouse:local
+
+# The app will be available at:
+[http://localhost:4321](http://localhost:4321)
 ```
 
 ---
@@ -96,3 +99,9 @@ npm run lighthouse:local
 - TinaCMS allows editing MDX content (blog, page) and JSON data (config.json).
 - Editable from /admin in "Preview Mode" (iframe).
 - Custom client:tina directive provides safe rendering in Astro.
+
+## Application preview
+
+![Logic Gate Simulator](https://github.com/user-attachments/assets/aaa7c7f0-2dbb-48c9-8d02-15fa931799ac)
+![Logic Minimizer Table](https://github.com/user-attachments/assets/ef2e3edf-a332-4e78-9622-b5be362c7bc9)
+![Logic Minimizer Schematic](https://github.com/user-attachments/assets/3dd5e254-00f7-4314-92da-852e4454bba6)
