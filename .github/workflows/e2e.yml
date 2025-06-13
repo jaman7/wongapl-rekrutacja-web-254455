@@ -71,7 +71,7 @@ jobs:
           echo "<meta http-equiv='refresh' content='./lighthouse/index.html'>" > playwright-report/index.html
 
       - name: Upload Combined Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: full-report
           path: playwright-report
@@ -83,7 +83,7 @@ jobs:
 
     steps:
       - name: Download final report artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: full-report
           path: playwright-report
